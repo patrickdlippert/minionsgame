@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Minions Matching Game</title>
+    <link rel="stylesheet" href="css/minions.css" />
+</head>
+
+<body>
+    <!-- Contain the game title graphic within a table -->
+    <table id="gameGraphic">
+        <tr> 
+            <td><img src="./images/Minion1.png" alt="minion icon"></td>
+            <td><img src="./images/Minion2.png" alt="minion icon"></td>
+            <td><img src="./images/Minion3.png" alt="minion icon"></td>
+            <td><img src="./images/Minion4.png" alt="minion icon"></td>
+            <td><img src="./images/Minion0.png" alt="minion icon"></td>
+        </tr>
+        <tr>
+            <td colspan=5>
+            <span>minions matching game</span></td>
+        </tr>
+    </table>
+
+    <p id="statusBar">
+        Click on the extra minion on the left. 
+         <!-- Select drop-down box for player difficulty -->
+        <span id="modeText">
+            <label for="gameMode">Game Mode:</label>
+            <select class="select-button" id="gameMode" name="gameMode" onchange="getPlayMode();">
+                <option value="EASY">Easy</option>
+                <option selected value="NORMAL">Normal</option>
+                <option value="DIFFICULT">Difficult</option>
+                <option value="EXTREME">Extreme</option>
+            </select>
+        </span>
+    
+        <span id="levelText">Placeholder</span>
+    </p>
+
+    <!-- Create a section to contain the two divs and use this instead of the body in the event listener, otherwise, clicking the mode button will end the game -->
+    <section id="playingField">
+        <div class="animatedArea"></div>
+        <div id="leftSide"></div>
+        <div id="rightSide"></div>
+    </section>
+
+    <!-- Modals -->
+    <div id="gameOverModal" class="modal">
+        <div class="gameover-modal">
+            <img id="gameOverMinions" src='./images/game-over.png' />
+            <p id="gameOverText">GAME OVER</p>
+            <P><button type="button" class="tryagain-button">Try Again?</button> </p>
+            </table>
+        </div>
+    </div>
+    
+
+    <audio id="myAudioNextLevel" preload="auto">
+        <source src="./mp3s/0-minion-sounds.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="myAudioGameOver" preload="auto">
+        <source src="./mp3s/minion-game-over.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/minions.js"></script>
+</body>
+</html>

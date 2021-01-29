@@ -1,0 +1,152 @@
+/* Images in the play area */
+div img {
+    position: absolute;
+    height: 100px;
+}
+
+/* Images in the page title area */
+td img {
+    height: 60px;
+    margin: 5px 0 0 20px;
+}
+
+/* Images in the Next Level animations */
+.animatedArea img {
+    position: absolute;
+    height: 200px; 
+    top: 150px;
+    z-index: 1; 
+}
+
+/* Make all divs 500 pixel squares */
+div {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+}
+/* Move the rightSide div 500 pixels to the right & create a vertical line on the left. */
+#rightSide {
+    left: 500px;
+    border-left: 1px solid;
+}
+
+/* Text in the page title area */
+td span {
+    color: #eb4d4d;
+    text-shadow: 2px 2px 10px #000000;
+    font: bold 44px "Courier New", Helvetica, serif;
+    margin: 0 0 0 20px;
+}
+
+/* Table that holds the game title and graphic */
+#gameGraphic {
+    width: 620px;
+    margin: 0 0 20px 195px; 
+    background-image: linear-gradient( cyan ,rgb(62, 74, 236));
+    border-radius: 10px;
+}
+        
+#statusBar {
+    color: yellow;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin: 0 0 20px 10px;
+    width: 1000px;  /* Prevent the paragraph from wrapping */
+    height: 10px;               
+}
+        
+/* Make a section that is large enough to contain the two divs */
+section {
+    position: absolute;
+    border: black solid;
+    border-radius: 25px;
+    background: rgb(179, 247, 179);
+    width: 1000px;
+    height: 500px;
+}
+
+body {
+    background: rgb(62, 74, 236);
+}
+
+#levelText {
+    margin-left: 240px;
+}
+
+#modeText {
+    margin-left: 120px;
+}
+
+/* Style the button for the Game Mode selector */
+.select-button {
+    background-color: rgb(240, 240, 240);
+    font-size: 16px;
+	font-family: sans-serif;
+    font-weight: 700;
+    color: #444;
+	line-height: 1.3;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: .5em;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+}
+/* Remove focus outline from the Game Mode selector */
+.select-button:focus {
+        outline: none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+
+}
+
+/* Modal Content/Box */
+.gameover-modal {
+    background-color:  rgb(10, 183, 226);
+    color: #eb4d4d;
+    margin: 25% auto; /* 25% from the top and centered */
+    padding: 10px;
+    border: 2px solid royalblue;
+    border-radius: 10px;
+    font: bold 44px "Courier New", Helvetica, serif;
+    font-weight: bolder;
+    text-shadow: 2px 2px 10px black;
+    text-align: center;
+    width: 300px;
+    height: 250px;
+    margin-left: 350px; 
+}
+.tryagain-button {
+    background-color: rgb(240, 240, 240);
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    border-radius: .5em;
+    padding: 10px;
+    margin: 160px 50px;
+}
+/* Remove focus outline from the "Try again? button */
+.tryagain-button:focus {
+    outline: none;
+}
+#gameOverMinions {
+    /*position: absolute; */
+    height: 200px;
+    left: 50px;
+    top: 0;
+}
+
+#gameOverText {
+    z-index: 100;
+    position: absolute;
+    top: 80px;
+    left: 36px;
+}
